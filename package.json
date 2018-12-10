@@ -1,0 +1,31 @@
+{
+    "name": "cluckr-redo",
+    "version": "1.0.0",
+    "description": "cluckr",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ciro-Golden/Cluckr-Redo.git"
+    },
+    "author": "Ciro Golden",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ciro-Golden/Cluckr-Redo/issues"
+    },
+    "homepage": "https://github.com/Ciro-Golden/Cluckr-Redo#readme",
+    "devDependencies": {
+        "nodemon": "^1.18.7"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "knex": "^0.16.1",
+        "method-override": "^3.0.0",
+        "morgan": "^1.9.1"
+    }
+}
