@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const logger = require("morgan");
 const cookieParser = require("cookie-parser");
-
+const bodyParser = require("body-parser");
 const app = express();
 
 app.set("view engine", "ejs");
@@ -10,24 +10,18 @@ app.use(logger("dev"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cookieParser());
-
-
-app.use((req, res, next) => {
-    console.log("🍪 Cookies:", req.cookies);
-})
 
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send("/views");
 });
 
 app.get("/views", (req, res) => {
-    res.render("index");
+    res.render("sign-in");
 });
 
-app.get("/views/partials", (req, res) => {
+app.get("/views", (req, res) => {
     res.render("partials/header");
 });
 
