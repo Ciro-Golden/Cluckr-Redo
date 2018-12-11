@@ -13,15 +13,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.get("/", (req, res) => {
-    res.send("/views");
-});
+// app.get("/", (req, res) => {
+//     res.send("/views");
+// });
 
 app.get("/views", (req, res) => {
     res.render("sign-in");
 });
 
-app.get("/views", (req, res) => {
+app.get("/views/partials", (req, res) => {
     res.render("partials/header");
 });
 
